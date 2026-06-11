@@ -1,15 +1,36 @@
-function App() {
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
-  return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center">
 
-      <h1 className="text-5xl font-bold">
-        My Portfolio
-      </h1>
+function App(){
 
-    </div>
-  )
+
+return(
+
+<>
+
+<Navbar/>
+
+<Hero/>
+
+<About/>
+
+<Skills/>
+
+<Projects/>
+
+<Contact/>
+
+
+</>
+
+)
 
 }
 
-export default App
+
+export default App;
