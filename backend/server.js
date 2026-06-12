@@ -1,26 +1,35 @@
 const express = require("express");
 const cors = require("cors");
 
+const contactRoutes = require("./routes/contactRoutes");
+
 
 const app = express();
 
 
-// middleware
 app.use(cors());
+
 app.use(express.json());
 
 
-// test route
-app.get("/", (req,res)=>{
 
-    res.send("Portfolio Backend Running");
+// routes
+
+app.use("/api/contact",contactRoutes);
+
+
+
+app.get("/",(req,res)=>{
+
+res.send("Portfolio Backend Running");
 
 });
 
 
-// server
+
+
 app.listen(5000,()=>{
 
-    console.log("Server running on port 5000");
+console.log("Server running on port 5000");
 
 });
