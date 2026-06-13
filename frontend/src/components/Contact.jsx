@@ -85,61 +85,103 @@ function Contact(){
 
                 <input
 
-                type="text"
+type="text"
 
-                name="name"
+name="name"
 
-                value={formData.name}
+value={formData.name}
 
-                onChange={handleChange}
+onChange={handleChange}
 
-                placeholder="Your Name"
+placeholder="Your Name"
 
-                className="w-full p-3 mb-4 text-black rounded"
+className="
+w-full
+p-3
+mb-4
+rounded
+bg-white
+text-black
+border
+border-gray-300
+focus:outline-none
+focus:ring-2
+focus:ring-cyan-400
+"
 
-                />
-
-
-
-                <input
-
-                type="email"
-
-                name="email"
-
-                value={formData.email}
-
-                onChange={handleChange}
-
-                placeholder="Your Email"
-
-                className="w-full p-3 mb-4 text-black rounded"
-
-                />
+/>
 
 
+<input
 
-                <textarea
+type="email"
 
-                name="message"
+name="email"
 
-                value={formData.message}
+value={formData.email}
 
-                onChange={handleChange}
+onChange={handleChange}
 
-                placeholder="Your Message"
+placeholder="Your Email"
 
-                className="w-full p-3 text-black rounded"
+className="
+w-full
+p-3
+mb-4
+rounded
+bg-white
+text-black
+border
+border-gray-300
+focus:outline-none
+focus:ring-2
+focus:ring-cyan-400
+"
 
-                rows="5"
+/>
 
-                />
 
+<textarea
+
+name="message"
+
+value={formData.message}
+
+onChange={handleChange}
+
+placeholder="Your Message"
+
+rows="5"
+
+className="
+w-full
+p-3
+rounded
+bg-white
+text-black
+border
+border-gray-300
+focus:outline-none
+focus:ring-2
+focus:ring-cyan-400
+"
+
+/>
 
 
                 <button
 
-                className="mt-5 bg-cyan-400 px-6 py-3 rounded text-black font-bold">
+                className="
+mt-5
+bg-cyan-400
+px-8
+py-3
+rounded
+text-black
+font-bold
+hover:bg-cyan-300
+transition
+">
 
                     Send Message
 
