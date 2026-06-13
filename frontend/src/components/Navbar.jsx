@@ -1,39 +1,77 @@
 function Navbar(){
 
-    return(
-        <nav className="fixed top-0 w-full bg-slate-900 text-white px-10 py-5 flex justify-between items-center z-50">
+return(
 
-            <h1 className="text-3xl font-bold text-cyan-400">
-                Yujal.
-            </h1>
+<nav className="
+fixed top-0 left-0 w-full
+bg-slate-950/80
+backdrop-blur-md
+text-white
+px-10 py-5
+flex justify-between items-center
+z-50
+">
 
 
-            <ul className="flex gap-8">
+<h1 className="
+text-3xl font-bold
+text-cyan-400
+">
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+Yujal.
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+</h1>
 
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
 
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+<ul className="
+hidden md:flex
+gap-8
+">
 
-            </ul>
 
-        </nav>
-    )
+{
+
+["Home","About","Skills","Projects","Contact"]
+
+.map(item=>(
+
+
+<li key={item}>
+
+
+<a
+
+href={`#${item.toLowerCase()}`}
+
+className="
+hover:text-cyan-400
+transition
+"
+
+>
+
+{item}
+
+</a>
+
+
+</li>
+
+
+))
+
+
+}
+
+
+</ul>
+
+
+</nav>
+
+)
+
 }
 
 
