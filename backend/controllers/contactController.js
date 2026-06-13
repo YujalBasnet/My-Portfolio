@@ -7,13 +7,11 @@ const transporter = require("../config/mail");
 exports.createContact = (req,res)=>{
 
 
-const data={
+const data = {
 
-name:req.body.name,
-
-email:req.body.email,
-
-message:req.body.message
+    name:req.body.name,
+    email:req.body.email,
+    message:req.body.message
 
 };
 
@@ -24,28 +22,26 @@ Contact.create(data,(err,result)=>{
 
 if(err){
 
-return res.status(500).json(err);
+    return res.status(500).json(err);
 
 }
 
 
 
-const mailOptions={
+
+const mailOptions = {
 
 
-from:process.env.EMAIL_USER,
+from: process.env.EMAIL_USER,
 
-
-to:process.env.EMAIL_USER,
-
+to: process.env.EMAIL_USER,
 
 subject:"New Portfolio Contact Message",
 
 
-text:
+text:`
 
-`
-You received a new message.
+New message received:
 
 Name:
 ${data.name}
@@ -69,19 +65,18 @@ transporter.sendMail(mailOptions,(error,info)=>{
 
 if(error){
 
-console.log(error);
+console.log("Email error:",error);
 
 }
 
 else{
 
-console.log("Email sent");
+console.log("Email sent successfully");
 
 }
 
 
 });
-
 
 
 
@@ -91,6 +86,32 @@ message:"Message saved and email sent"
 
 });
 
+
+});
+
+
+};
+
+
+
+
+
+// GET ALL MESSAGES
+
+exports.getContacts = (req,res)=>{
+
+
+Contact.getAll((err,result)=>{
+
+
+if(err){
+
+return res.status(500).json(err);
+
+}
+
+
+res.json(result);
 
 
 });
