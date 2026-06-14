@@ -13,9 +13,16 @@ About Me
 
 <p className="mt-10 text-center text-gray-300">
 
-I am a Computer Science student interested in
-full stack development. I enjoy creating applications
-and solving real-world problems.
+Computer Science student with hands-on experience in full-stack development, 
+backend engineering, and database-driven applications. 
+Skilled in React, Node.js, Java, JSP/Servlet, Python, MySQL, and 
+building scalable software solutions. Developed projects including a Hostel Finder System, 
+Student Management System, demonstrating experience in API development, 
+CRUD operations, database design, and problem-solving.
+
+Seeking a software development internship to contribute to impactful products, 
+strengthen technical expertise, and gain experience in professional software engineering 
+environments.
 
 </p>
 
