@@ -104,9 +104,10 @@ leading-8
 ">
 
 
-I build modern web applications using React,
-Node.js and databases. Passionate about creating
-clean, scalable and user-friendly solutions.
+I create modern full-stack applications with React, Node.js, Java, and MySQL. 
+Passionate about building scalable solutions, solving real-world problems, and 
+continuously improving my skills through hands-on projects.
+
 
 
 </p>
