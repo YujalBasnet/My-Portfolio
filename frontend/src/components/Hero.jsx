@@ -55,7 +55,7 @@ text-6xl
 font-bold
 ">
 
-Yujal Basnet
+Yujal Khulal Basnet
 
 </h1>
 
