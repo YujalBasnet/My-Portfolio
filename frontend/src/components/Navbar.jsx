@@ -1,20 +1,39 @@
+import {motion} from "framer-motion";
+
+
 function Navbar(){
 
 return(
 
-<nav className="
-fixed top-0 left-0 w-full
-bg-slate-950/80
-backdrop-blur-md
-text-white
-px-10 py-5
-flex justify-between items-center
+<motion.nav
+
+initial={{y:-100}}
+
+animate={{y:0}}
+
+className="
+fixed top-0
+w-full
 z-50
-">
+bg-slate-950/80
+backdrop-blur-lg
+border-b
+border-slate-800
+px-8
+py-5
+flex
+justify-between
+items-center
+text-white
+"
+
+
+>
 
 
 <h1 className="
-text-3xl font-bold
+text-3xl
+font-bold
 text-cyan-400
 ">
 
@@ -24,23 +43,22 @@ Yujal.
 
 
 
-<ul className="
-hidden md:flex
+<div className="
+flex
 gap-8
+text-gray-300
 ">
 
 
 {
-
 ["Home","About","Skills","Projects","Contact"]
 
-.map(item=>(
-
-
-<li key={item}>
+.map((item)=>(
 
 
 <a
+
+key={item}
 
 href={`#${item.toLowerCase()}`}
 
@@ -56,19 +74,18 @@ transition
 </a>
 
 
-</li>
-
-
 ))
-
 
 }
 
 
-</ul>
+
+</div>
 
 
-</nav>
+
+</motion.nav>
+
 
 )
 
