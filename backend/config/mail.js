@@ -1,5 +1,7 @@
 const nodemailer = require("nodemailer");
 
+console.log("mail.js loaded");
+
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -10,7 +12,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-transporter.verify((error, success) => {
+transporter.verify((error) => {
   if (error) {
     console.log("SMTP Verify Error:", error);
   } else {
