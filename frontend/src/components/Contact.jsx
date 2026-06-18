@@ -116,6 +116,7 @@ function Contact(){
              href="https://mail.google.com/mail/?view=cm&fs=1&to=laxmikhulalbasnet@gmail.com"
                 target="_blank"
                  rel="noreferrer"
+                className="hover:text-cyan-400 transition"
             >
                  laxmikhulalbasnet@gmail.com
             </a>
