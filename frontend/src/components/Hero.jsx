@@ -160,7 +160,7 @@ transition
 >
 
 
-View Projects
+Wanna See My Work?
 
 
 </a>
