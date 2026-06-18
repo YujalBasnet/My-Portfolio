@@ -1,39 +1,36 @@
-const transporter = require("../config/mail");
+const { Resend } = require("resend");
 
-exports.createContact = (req, res) => {
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-  const data = {
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
-  };
+exports.createContact = async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-    subject: "Portfolio's Message",
-    text: `
-New message received:
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "laxmikhulalbasnet@gmail.com",
+      subject: "New Portfolio Message",
+      text: `
+New message received
 
-Name:
-${data.name}
-
-Email:
-${data.email}
+Name: ${name}
+Email: ${email}
 
 Message:
-${data.message}
-`
-  };
+${message}
+      `,
+    });
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log("Email error:", error);
-      return res.status(500).json({ message: "Failed to send email" });
-    } else {
-      console.log("Email sent successfully");
-      return res.json({ message: "Message sent successfully" });
-    }
-  });
+    console.log("Email sent:", response);
 
+    return res.json({
+      message: "Message sent successfully",
+    });
+  } catch (error) {
+    console.error("Resend Error:", error);
+
+    return res.status(500).json({
+      message: "Failed to send message",
+    });
+  }
 };
