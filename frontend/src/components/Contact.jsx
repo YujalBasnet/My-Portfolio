@@ -113,10 +113,11 @@ function Contact(){
           <div className="flex items-center gap-4">
             <FaEnvelope className="text-cyan-400 text-2xl" />
             <a
-              href="mailto:laxmikhulalbasnet@gmail.com"
-              className="hover:text-cyan-400 transition"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=laxmikhulalbasnet@gmail.com"
+                target="_blank"
+                 rel="noreferrer"
             >
-              laxmikhulalbasnet@gmail.com
+                 laxmikhulalbasnet@gmail.com
             </a>
           </div>
 
