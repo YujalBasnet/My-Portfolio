@@ -31,176 +31,193 @@ function Contact(){
     };
 
 
-    const handleSubmit=async(e)=>{
+    const handleSubmit = async (e) => {
+  e.preventDefault();
 
-        e.preventDefault();
+  if (
+    !formData.name.trim() ||
+    !formData.email.trim() ||
+    !formData.message.trim()
+  ) {
+    alert("All fields are required");
+    return;
+  }
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        try{
+  if (!emailRegex.test(formData.email.trim())) {
+    alert("Please enter a valid email address");
+    return;
+  }
 
-            await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/contact`,
-                formData
-            );
+  try {
+    await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/contact`,
+      formData
+    );
 
+    alert("Message sent successfully");
 
-            alert("Message sent successfully");
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
 
+  } catch (error) {
+    console.log(error);
+    alert("Failed to send message");
+  }
 
-            setFormData({
-
-                name:"",
-                email:"",
-                message:""
-
-            });
-
-
-        }
-        catch(error){
-
-            console.log(error);
-
-            alert("Failed to send message");
-
-        }
 
     };
 
 
-    return(
+    return (
+  <section
+    id="contact"
+    className="py-20 px-6 md:px-20 bg-slate-950 text-white"
+  >
+    <h2 className="text-4xl font-bold text-center">
+      Contact Me
+    </h2>
 
-        <section
-        id="contact"
-        className="py-20 px-20 bg-slate-950 text-white">
+    <div className="flex flex-col md:flex-row justify-center gap-16 mt-12">
 
+      {/* Contact Info */}
 
-            <h2 className="text-4xl font-bold text-center">
+      <div className="md:w-1/3">
 
-                Contact Me
+        <h3 className="text-2xl font-semibold mb-4">
+          Let's Connect
+        </h3>
 
-            </h2>
+        <p className="text-gray-300 mb-8">
+          Open to freelance work, internships, and collaboration opportunities.
+        </p>
 
+        <div className="space-y-6">
 
+          <div className="flex items-center gap-4">
+            <FaWhatsapp className="text-green-500 text-2xl" />
+            <a
+              href="https://wa.me/9741881756"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              +977 9741881756
+            </a>
+          </div>
 
-            <form
-            onSubmit={handleSubmit}
-            className="max-w-xl mx-auto mt-10">
+          <div className="flex items-center gap-4">
+            <FaEnvelope className="text-cyan-400 text-2xl" />
+            <a
+              href="mailto:laxmikhulalbasnet@gmail.com"
+              className="hover:text-cyan-400 transition"
+            >
+              laxmikhulalbasnet@gmail.com
+            </a>
+          </div>
 
+          <div className="flex items-center gap-4">
+            <FaMapMarkerAlt className="text-red-500 text-2xl" />
+            <span>Morang, Nepal</span>
+          </div>
 
-                <input
+        </div>
+      </div>
 
-type="text"
+      {/* Contact Form */}
 
-name="name"
+      <form
+        onSubmit={handleSubmit}
+        className="md:w-1/2"
+      >
 
-value={formData.name}
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Your Name"
+          className="
+          w-full
+          p-3
+          mb-4
+          rounded
+          bg-white
+          text-black
+          border
+          border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-cyan-400
+          "
+        />
 
-onChange={handleChange}
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Your Email"
+          className="
+          w-full
+          p-3
+          mb-4
+          rounded
+          bg-white
+          text-black
+          border
+          border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-cyan-400
+          "
+        />
 
-placeholder="Your Name"
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Your Message"
+          rows="5"
+          className="
+          w-full
+          p-3
+          rounded
+          bg-white
+          text-black
+          border
+          border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-cyan-400
+          "
+        />
 
-className="
-w-full
-p-3
-mb-4
-rounded
-bg-white
-text-black
-border
-border-gray-300
-focus:outline-none
-focus:ring-2
-focus:ring-cyan-400
-"
+        <button
+          className="
+          mt-5
+          bg-cyan-400
+          px-8
+          py-3
+          rounded
+          text-black
+          font-bold
+          hover:bg-cyan-300
+          transition
+          "
+        >
+          Send Message
+        </button>
 
-/>
+      </form>
 
-
-<input
-
-type="email"
-
-name="email"
-
-value={formData.email}
-
-onChange={handleChange}
-
-placeholder="Your Email"
-
-className="
-w-full
-p-3
-mb-4
-rounded
-bg-white
-text-black
-border
-border-gray-300
-focus:outline-none
-focus:ring-2
-focus:ring-cyan-400
-"
-
-/>
-
-
-<textarea
-
-name="message"
-
-value={formData.message}
-
-onChange={handleChange}
-
-placeholder="Your Message"
-
-rows="5"
-
-className="
-w-full
-p-3
-rounded
-bg-white
-text-black
-border
-border-gray-300
-focus:outline-none
-focus:ring-2
-focus:ring-cyan-400
-"
-
-/>
-
-
-                <button
-
-                className="
-mt-5
-bg-cyan-400
-px-8
-py-3
-rounded
-text-black
-font-bold
-hover:bg-cyan-300
-transition
-">
-
-                    Send Message
-
-                </button>
-
-
-
-            </form>
-
-
-        </section>
-
-    )
-
+    </div>
+  </section>
+);
 }
 
 
