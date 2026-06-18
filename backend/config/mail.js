@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
 console.log("mail.js loaded");
 
-const nodemailer = require("nodemailer");
+
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
