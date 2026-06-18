@@ -1,5 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaMapMarkerAlt
+} from "react-icons/fa";
 
 
 function Contact(){
