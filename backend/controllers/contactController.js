@@ -28,59 +28,24 @@ message:"All fields are required"
 
 
 
-const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const { Resend } = require("resend");
 
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-if(!emailRegex.test(email.trim())){
-
-
-return res.status(400).json({
-
-message:"Invalid email"
-
-});
-
-}
-
-
-
-
-await transporter.sendMail({
-
-
-from: process.env.EMAIL_USER,
-
-
-to: process.env.EMAIL_USER,
-
-
-subject:"New Portfolio Message",
-
-
-text:`
-
+await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: process.env.EMAIL_USER, // your Gmail
+  subject: "New Portfolio Message",
+  text: `
 New message from portfolio
 
-
-Name:
-${name}
-
-
-Email:
-${email}
-
+Name: ${name}
+Email: ${email}
 
 Message:
 ${message}
-
-
-`
-
-
+`,
 });
-
-
-
 
 console.log("Email sent successfully");
 
