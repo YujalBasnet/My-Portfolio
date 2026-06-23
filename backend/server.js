@@ -1,6 +1,6 @@
 const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
-
+console.log("Node Version:", process.version);
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
