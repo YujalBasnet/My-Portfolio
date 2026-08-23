@@ -135,15 +135,7 @@ technology.
 
 </p>
 
-
-
-
 </motion.div>
-
-
-
-
-
 
 {/* Cards */}
 
