@@ -150,14 +150,9 @@ whileInView={{opacity:1,x:0}}
 transition={{duration:0.7}}
 
 viewport={{once:true}}
-
-
-
 className="
 space-y-5
 "
-
-
 >
 
 
