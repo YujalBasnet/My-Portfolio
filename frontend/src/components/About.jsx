@@ -178,12 +178,7 @@ text-cyan-400
 "
 
 />
-
-
-
 <div>
-
-
 <h4 className="
 text-xl
 font-bold
