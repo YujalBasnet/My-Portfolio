@@ -201,15 +201,7 @@ Currently Pursuing Bachelor's Degree in Computer Science
 
 </div>
 
-
-
 </div>
-
-
-
-
-
-
 
 <div
 
