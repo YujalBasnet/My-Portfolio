@@ -1,14 +1,8 @@
 import {FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
-
-
 function Footer(){
-
-
 return(
 
-
 <footer
-
 className="
 bg-slate-950
 text-gray-400
@@ -20,8 +14,6 @@ border-slate-800
 flex
 items-center
 "
-
-
 >
 
 
