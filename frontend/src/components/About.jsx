@@ -54,25 +54,17 @@ transition={{duration:0.7}}
 
 viewport={{once:true}}
 >
-
-
-
 <h3
-
 className="
 text-3xl
 font-bold
 mb-5
 "
-
 >
 
 Hello, I'm Yujal 
 
 </h3>
-
-
-
 
 <p
 
