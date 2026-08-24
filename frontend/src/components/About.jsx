@@ -214,15 +214,7 @@ Full-stack web development, APIs, databases and software solutions
 
 </div>
 
-
-
 </div>
-
-
-
-
-
-
 
 <div
 
