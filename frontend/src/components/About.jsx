@@ -75,18 +75,13 @@ leading-8
 
 >
 
-
 I am a Computer Science student passionate about
 full-stack development and building practical software
 solutions. I have hands-on experience developing web
 applications using React, Node.js, Java, JSP/Servlet,
 and database technologies.
 
-
 </p>
-
-
-
 
 <p
 
@@ -97,14 +92,11 @@ mt-5
 "
 
 >
-
-
 Through projects like Hostel Finder System, Student
 Management System, I have
 worked on backend development, database management,
 CRUD operations, and solving real-world problems through
 technology.
-
 
 </p>
 
