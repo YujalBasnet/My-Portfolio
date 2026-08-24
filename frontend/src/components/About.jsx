@@ -6,8 +6,6 @@ function About(){
 
 
 return(
-
-
 <section
 
 id="about"
@@ -19,8 +17,6 @@ md:px-20
 bg-slate-900
 text-white
 "
-
-
 >
 
 
