@@ -263,22 +263,9 @@ Looking for opportunities to contribute, learn and grow as a software developer
 
 </div>
 
-
-
-
-
-
-
 </motion.div>
 
-
-
-
 </div>
-
-
-
-
 
 </section>
 
@@ -286,6 +273,5 @@ Looking for opportunities to contribute, learn and grow as a software developer
 )
 
 }
-
 
 export default About;
