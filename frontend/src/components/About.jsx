@@ -231,7 +231,6 @@ transition
 
 >
 
-
 <FaLaptopCode
 
 className="
@@ -241,20 +240,15 @@ text-purple-400
 
 />
 
-
-
 <div>
-
 
 <h4 className="
 text-xl
 font-bold
 ">
-
 Goals
 
 </h4>
-
 
 <p className="
 text-gray-400
@@ -265,10 +259,7 @@ Looking for opportunities to contribute, learn and grow as a software developer
 
 </p>
 
-
 </div>
-
-
 
 </div>
 
