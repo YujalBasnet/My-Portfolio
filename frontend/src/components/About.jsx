@@ -18,10 +18,7 @@ bg-slate-900
 text-white
 "
 >
-
-
 <h2
-
 className="
 text-4xl
 font-bold
@@ -29,17 +26,11 @@ text-center
 text-cyan-400
 mb-12
 "
-
 >
 
 About Me
 
 </h2>
-
-
-
-
-
 <div
 
 className="
