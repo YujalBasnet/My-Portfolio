@@ -15,20 +15,14 @@ flex
 items-center
 "
 >
-
-
 <div
-
 className="
 w-full
 flex
 justify-between
 items-center
 "
-
-
 >
-
 
 <p
 
@@ -41,10 +35,6 @@ className="text-sm">
 
 </p>
 
-
-
-
-
 <div
 
 className="
@@ -53,7 +43,6 @@ gap-5
 "
 
 >
-
 
 <a
 
@@ -72,10 +61,6 @@ transition
 
 </a>
 
-
-
-
-
 <a
 
 href="https://linkedin.com/in/yourusername"
@@ -88,14 +73,9 @@ transition
 "
 
 >
-
 <FaLinkedin size={20}/>
 
 </a>
-
-
-
-
 
 {/* <a
 
