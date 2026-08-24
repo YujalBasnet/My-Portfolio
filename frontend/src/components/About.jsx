@@ -183,20 +183,15 @@ transition
 
 >
 
-
 <FaCode
 
 className="
 text-4xl
 text-green-400
 "
-
 />
 
-
-
 <div>
-
 
 <h4 className="
 text-xl
@@ -206,7 +201,6 @@ font-bold
 Development
 
 </h4>
-
 
 <p className="
 text-gray-400
