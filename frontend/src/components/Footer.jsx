@@ -91,24 +91,14 @@ transition
 <FaEnvelope size={20}/>
 
 </a> */}
-
-
-
 </div>
 
-
-
 </div>
-
-
-
 
 </footer>
-
 
 )
 
 }
-
 
 export default Footer;
